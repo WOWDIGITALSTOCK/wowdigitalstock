@@ -1,6 +1,7 @@
 /* Estilos generales */
 body {
-    font-family: 'Super Duty', montserrat;
+    font-family: 'Mifuente';
+    src: url('ComicJungleExtrude.ttf') format('truetype');
     line-height: 1.6;
     margin: 0;
     padding: 20px;
