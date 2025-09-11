@@ -44,7 +44,7 @@
                 <tbody>
                     <!-- Todas tus filas de productos se mantienen igual -->
                     <tr>
-                        <td><a href="#" onclick="mostrarImagen('F_1200DG.png')">FAMI220</a></td>
+                        <td><a href="#" onclick="mostrarImagen('imagenes/FAMI220.jpg')">FAMI220</a></td>
                         <td>Freezer inclinado 220</td>
                         <td class="available">DISPONIBLE</td>
                         <td>$855,000</td>
@@ -2398,7 +2398,7 @@
                             
                 </tbody>
             </table>
-            <!-- Modal -->
+<!-- Modal -->
 <div id="miModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="cerrarModal()">&times;</span>
@@ -2409,14 +2409,25 @@
 <!-- Script -->
 <script>
   function mostrarImagen(src) {
-    document.getElementById("miModal").style.display = "block";
-    document.getElementById("imagenProducto").src = src;
+    const modal = document.getElementById("miModal");
+    const img = document.getElementById("imagenProducto");
+    img.src = src;
+    modal.style.display = "flex"; // usa flexbox para centrar
   }
 
   function cerrarModal() {
     document.getElementById("miModal").style.display = "none";
   }
+
+  // Cerrar modal haciendo clic fuera de la imagen
+  window.onclick = function(event) {
+    const modal = document.getElementById("miModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
 </script>
+
 
         </section>
 
