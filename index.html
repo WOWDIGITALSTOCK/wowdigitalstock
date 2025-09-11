@@ -2398,6 +2398,26 @@
                             
                 </tbody>
             </table>
+            <!-- Modal -->
+<div id="miModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img id="imagenProducto" src="">
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function mostrarImagen(src) {
+    document.getElementById("miModal").style.display = "block";
+    document.getElementById("imagenProducto").src = src;
+  }
+
+  function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+  }
+</script>
+
         </section>
 
         <section class="stock-summary">
